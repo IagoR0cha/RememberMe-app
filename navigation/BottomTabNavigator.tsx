@@ -6,8 +6,8 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import Home from '../screens/Home';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, HomeParamList, TabTwoParamList } from '../types';
+import Alarms from '../screens/Alarms';
+import { BottomTabParamList, HomeParamList, AlarmsParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -32,10 +32,10 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Alarms"
+        component={AlarmsNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="alarm-outline" color={color} />,
 
         }}
       />
@@ -67,16 +67,16 @@ function HomeNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const AlarmsStack = createStackNavigator<AlarmsParamList>();
 
-function TabTwoNavigator() {
+function AlarmsNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+    <AlarmsStack.Navigator>
+      <AlarmsStack.Screen
+        name="AlarmsScreen"
+        component={Alarms}
+        options={{ headerShown: false }}
       />
-    </TabTwoStack.Navigator>
+    </AlarmsStack.Navigator>
   );
 }

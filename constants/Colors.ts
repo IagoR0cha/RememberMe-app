@@ -12,7 +12,9 @@ export default {
     textDark: '#000',
     textGray: '#777',
     disableColor: '#C6D7F8',
-    missedAlarmColor: '#FF8D8D'
+    missedAlarmColor: '#FF8D8D',
+    successColor: '#3AEA37',
+    secondaryColor: '#7AA4F2'
   },
   dark: {
     text: '#fff',
@@ -24,6 +26,8 @@ export default {
     textDark: '#000',
     textGray: '#777',
     disableColor: '#C6D7F8',
-    missedAlarmColor: '#FF8D8D'
+    missedAlarmColor: '#FF8D8D',
+    successColor: '#3AEA37',
+    secondaryColor: '#7AA4F2'
   },
 };
